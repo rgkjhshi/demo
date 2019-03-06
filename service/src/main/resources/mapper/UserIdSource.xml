@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mapper.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mk.miaotu.service.dao.UserIdSourceDao">
+
+    <!-- 这个语句直接在Dao中用注解的形式写了，这里就不用写了 -->
+    <!--<insert id="add" parameterType="UserIdSource" useGeneratedKeys="true" keyProperty="id">-->
+        <!--INSERT INTO user_id_source (id) VALUES (NULL);-->
+    <!--</insert>-->
+
+    <select id="queryOne" parameterType="UserIdSource" resultType="UserIdSource">
+        SELECT id AS id FROM user_id_source LIMIT 1;
+    </select>
+
+    <select id="queryList" parameterType="UserIdSource" resultType="UserIdSource">
+        SELECT id AS id FROM user_id_source;
+    </select>
+
+</mapper>
